@@ -1,0 +1,185 @@
+www.pythontutor.com #Para fazer teste de mesa
+# #Para colocar coment�rios
+''' #Antes e depois para fazer um comentario de v�rias linhas 
+print (x) #printa o valor x
+print ("Rafa") #printa "Rafa"
+type (42) #mostra qual variavel "42" pertence {inteiro}
+id(42) #mostra onde o endere�o do objeto "42"
+dir("abacate") #Mostra todos os metodos que s�o aplicaveis ao objeto (M�todos com __""__ s�o reservados)
+help("abacate".upper) # Mostra para que serve um metodo ("upper")
+Alt+p #Mostra os ultimos comandos digitados(Tras)
+Alt+n #Mostra os ultimos comandos digitados(Frente)
+&& == and
+|| == or
+2+3 #soma 2 com 3 = 5
+3*4 #multiplica 3 com 4 = 12
+3/2  #divide 3 com 2 = 1.5
+3//2  #Divide inteiramente 3 com 2 = 1
+2**10 #2 elevado a 10 = 1024
+
+------------------------------------------------------------------------------------------------------------------------------
+	Strings:
+string = 'Monty Python'
+
+print(string[0]) #strings tem um funcionamento parecido com listas.
+print(string[0:5]) #retorna os valores das posi��es 0-4, tamb�m funciona como listas.
+print(string.lower()) #retorna a string, por�m min�scula.
+print(string.upper()) #retorna a string, por�m mai�scula.
+print(string.capitalize()) #retorna a string com a primeira letra mai�scula.
+print(str(len(string))) #retorna o tamanho da lista/string, como um int. E str() converte para char/string.
+my_list = my_string.split() #retorna a string tranformada em uma lista, cada item � divido pelos espacos: ' '.
+my_string = ' '.join(my_list) #retorna a lista transformada em uma string, cada item � dividido pelos ' '.
+
+	String - Condicional:
+string = 'xablau'
+
+print(string.isalnum()) #retorna True caso a string tenha pelo menos 1 caractere e todos os caracteres sejam alfabeticos e numericos.
+print(string.isalpha()) #retorna True se todos os caracteres forem alfab�ticos.
+print(string.isnumeric()) #retorna True se todos os caracteres sejam n�meros.
+print(string.islower()) #Se todos os caracteres sejam minusculos.
+print(string.isupper()) #Mai�sculos
+print(string.isspace()) # Todos os caracteres sejam ''
+print(string.isdigit()) #Todos os caracteres sejam n�meros.
+
+	String - Concatena��o:
+aux_str = 'yeah'
+string_a = 'hell' + ' '+aux_str+'!'
+string_b = 'hell %s!' %(aux_str)
+
+print(string_a)
+print(string_b)
+print(string_a*2) #repete a string pelo n�mero de vezes digitado
+print(string_a + string_b) #concatena as strings
+
+------------------------------------------------------------------------------------------------------------------------------
+	Lista:
+listaNomes = ['Robert Fispo', 'Eric Clapton', 'Jimi Hendrix', 'Greg Lake']
+listaNumeros = [10, 2, 4, 8, 6, 3, 5, 9, 1, 20]
+listaMaisNumero = [11, 12, 13, 14, 15]
+listaRepetida = [1, 1, 2, 11, 2, 1, 1, 1, 1, 1, 1]
+
+listaNomes.append('John Frusciante') //Adiciona o par�metro no final da lista.
+listaNumeros.extend(listaMaisNumeros) //Adiciona a lista no final de outra lista.
+listaNumeros.insert(3, 7) //Insere o numero 7 na posi��o 3 da lista.
+listaNomes.remove('Greg Lake') //Remove o par�metro da lista.
+vinte = listaNumeros.pop(9) //Remove o item na posi��o 9 da lista, e retorna pra uma vari�vel.
+listaMaisNumeros.clear() //Limpa a lista.
+valor = listaNomes.index('Eric Clapton') // Retorna a posi��o do item.
+cont = listaRepetida.count(1) // Retorna quantas vezes um item se repete na lista.
+listaNumeros.sort() //Organiza a lista de forma crescente
+listaReverse = listaNumeros.copy() //Copia a lista
+listaReverse.reverse() //Inverte as posi��es de todos os itens da lista.
+my_list = my_string.split() #retorna a string tranformada em uma lista, cada item � divido pelos espacos: ' '.
+my_string = ' '.join(my_list) #retorna a lista transformada em uma string, cada item � dividido pelos ' '.
+
+my_tupla = (1, 2 ,3)
+t_lista = tuple(listaNumeros)
+
+------------------------------------------------------------------------------------------------------------------------------
+	Dicion�rios:
+my_dict = {
+	'Nome': '',
+	'Idade': 0,
+	'Livros favoritos': ['A sociedade do anel', 'As duas torres', 'O retorno do rei']
+}
+
+print(my_dict)
+print(my_dict['Nome'])
+print(my_dict['Idade'])
+print(my_dict['Livros favoritos'])
+
+	Dicion�rios - fun��es:
+my_dict = {'letra':'a', 'numero':1, 'lista':range(3)}
+
+my_dict.clear() #remove todos os elementos do dicin�rio.
+my_new_dict = my_dict.copy() #copia o dicion�rio
+my_new_new_dict = dict.fromkeys(['1', '2', '3'], 10) #cria��o de dicion�rio.
+aux = my_new_new_dict.get('1', 'lul') #retorna o valor da chave, caso ela exista, caso contr�rio, default.
+my_new_new_dict.setdefault('4', 11) #funciona de forma semelhante ao get(), por�m, caso a chave n�o exista, ela � criada.
+del my_dict['letra'] #Remove a chave do discionário
+print(aux)
+print(my_new_new_dict.items()) #retorna os pares chave/valor.
+print(my_new_new_dict.values()) #retorna os valores.
+print(my_new_new_dict.keys()) #retorna as chaves.
+
+------------------------------------------------------------------------------------------------------------------------------
+	Bibliotecas:
+
+from datetime import datetime
+	-> print datetime.now() //print a data e hora atual
+	-> print (datatime.now).year || .month || .day // imprime aprena o ano || m�s || dia
+	-> print (datetime.now).hour || .minute || .second //imprime apenas a hora || minutos || segundos
+
+import random
+	-> print(random.randrange(4)) //Retorna 1 numero inteiro entre (0, n-1).
+	-> print(random.randint(1, 4)) //Retorna 1 numero entre (a, b)
+	-> print(random.choice(lista)) //Retorna 1 valor aleatorio dentre os que estao presentes na lista.
+	-> print(random.shuffle(lista)) //Embaralha aleatoriamente os valores da lista.
+	-> print(random.sample(lista, 3)) //Retorna uma lista contendo n valores (aleatorios) presentes na lista escolhida.
+	-> print(random.random()) //Retorna um número entre (0, 1(
+	-> print(random.uniform(1, 10)) //Retorna um número (flutuante) entre (a, b(
+
+import math
+	-> print(math.ceil(3.14)) //Retorna menor inteiro maior ou igual a n.
+	-> print(math.floor(3.14)) #Retorna o maior inteiro menor ou igual a n.
+	-> print(math.fabs(-4)) //Retorna o valor absoluto (módulo) de n.
+	-> print(math.exp(2)) #Retorna e (nepper) elevado a n.
+	-> print(math.log10(100)) #Retorna o logaritmo de n na base 10.
+	-> print(math.pow(2, 10)) #Retorna a potencia de base a e expoente b.
+	-> print(math.sqrt(25)) #Retorna a raiz quadrada de n.
+	-> print(math.cos(0)) #Retorna o cosseno de n. (radianos)
+	-> print(math.sin(90)) #Retorna o seno de n. (radianos)
+	-> print(math.pi) #Retorna o valor de pi com 15 casas decimais.
+	-> print(math.e) #Retorna o valor de e (nepper) com 15 casas decimais.
+------------------------------------------------------------------------------------------------------------------------------
+	Fun��es:
+
+def nome_funcao (parametros):
+	#codigo
+	#Sempre a fun��o deve ter um return
+	#Mesmo caso nao seja necessario um retorno, deve usar um return True no final
+	
+------------------------------------------------------------------------------------------------------------------------------
+     Operadores Booleanos:
+
+True and True e True		||	True or True e True
+True and False e False		||	True or False e True	||	Not True e False
+False and True e False		||	False or True e True	||	Not False e True
+False and False e False		||	False or False e False
+	Ordem de avalia��o: 1� not/ 2� and/ 3� or
+
+------------------------------------------------------------------------------------------------------------------------------
+	Palavras reservadas:
+
+***No terminal:
+		python3.5
+		import keyword
+		print(keyword.kwlist)
+
+------------------------------------------------------------------------------------------------------------------------------
+	Progama��o Funcional:
+
+Comando lambda:
+	variavel = lambda parametro: comandos
+	Ex.: fat = lambda num: num * fat( num - 1 ) if num > 1 else 1
+#Recursividade. vai executar o comando se num for maior que 1, se nao apenas retorna 1.
+
+Comando map:
+	variavel = map(lambda..., repeti��o)
+	Ex.:
+		lista = [1,2,3]
+		quadrado = map(lambda x: x**2, lista)
+		for i in quadrado:
+			print(i)
+			#Ir� printar os valores dentro da lista ao quadrado.
+
+Comando reduce:
+	import functools
+	print(functools.reduce(lambda x,y: x+y, [1,2,3,4]))
+	#printa 10, que s�o os valores somados dentro da lista.
+
+Comando filter:
+	variavel = filter(lambda x: x%2 == 0, range(10))
+	for i in variavel:
+		print(i)
+	#printa os numero pares de 0 � 9. Ou seja, 0, 2, 4, 6, 8
